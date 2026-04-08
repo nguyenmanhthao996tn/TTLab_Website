@@ -33,3 +33,6 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Docker
+.dockerignore
