@@ -7,31 +7,31 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 function ResearchAreaCard({ name, description, index }: { name: string; description: string; index: number }) {
   const ref = useScrollAnimation();
 
-  const bgGradients = [
-    "bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800",
-    "bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800",
-    "bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800",
-    "bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900 dark:to-pink-800",
-    "bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800",
-    "bg-gradient-to-br from-cyan-50 to-cyan-100 dark:from-cyan-900 dark:to-cyan-800",
+  const bgShades = [
+    "bg-neutral-50 dark:bg-neutral-900",
+    "bg-neutral-100 dark:bg-neutral-900",
+    "bg-neutral-50 dark:bg-neutral-900",
+    "bg-neutral-100 dark:bg-neutral-900",
+    "bg-neutral-50 dark:bg-neutral-900",
+    "bg-neutral-100 dark:bg-neutral-900",
   ];
 
   const borderAccents = [
-    "border-l-4 border-blue-500",
-    "border-l-4 border-purple-500",
-    "border-l-4 border-green-500",
-    "border-l-4 border-pink-500",
-    "border-l-4 border-orange-500",
-    "border-l-4 border-cyan-500",
+    "border-l-4 border-neutral-900 dark:border-neutral-100",
+    "border-l-4 border-neutral-700 dark:border-neutral-300",
+    "border-l-4 border-neutral-500 dark:border-neutral-500",
+    "border-l-4 border-neutral-900 dark:border-neutral-100",
+    "border-l-4 border-neutral-700 dark:border-neutral-300",
+    "border-l-4 border-neutral-500 dark:border-neutral-500",
   ];
 
   return (
     <div
       ref={ref}
-      className={`opacity-0 translate-y-4 transition-all duration-500 ${bgGradients[index % 6]} ${borderAccents[index % 6]} p-8 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300`}
+      className={`opacity-0 translate-y-4 transition-all duration-500 ${bgShades[index % 6]} ${borderAccents[index % 6]} p-8 rounded-lg shadow-sm hover:shadow-md hover:scale-105 transform transition-all duration-300`}
     >
-      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{name}</h3>
-      <p className="text-gray-700 dark:text-gray-300">{description}</p>
+      <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">{name}</h3>
+      <p className="text-neutral-700 dark:text-neutral-300">{description}</p>
     </div>
   );
 }
@@ -40,10 +40,10 @@ export function ResearchAreas() {
   const { t } = useThemeLanguage();
 
   return (
-    <section id="research" className="py-20 px-4 bg-gray-50 dark:bg-slate-800">
+    <section id="research" className="py-20 px-4 bg-neutral-100 dark:bg-neutral-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
             {t.research.title}
           </h2>
         </div>

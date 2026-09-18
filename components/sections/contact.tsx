@@ -9,13 +9,13 @@ export function Contact() {
   const { t } = useThemeLanguage();
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gray-50 dark:bg-slate-800">
+    <section id="contact" className="py-20 px-4 bg-neutral-100 dark:bg-neutral-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
             {t.contact.title}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">{t.contact.description}</p>
+          <p className="text-lg text-neutral-600 dark:text-neutral-400">{t.contact.description}</p>
         </div>
 
         <RainbowDivider />
@@ -24,82 +24,82 @@ export function Contact() {
           {/* Contact Info */}
           <div className="space-y-6">
             <div className="flex gap-4 items-start">
-              <Mail className="text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" size={24} />
+              <Mail className="text-neutral-700 dark:text-neutral-300 flex-shrink-0 mt-1" size={24} />
               <div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Email</h3>
+                <h3 className="font-bold text-neutral-900 dark:text-white mb-1">{t.contact.labels.email}</h3>
                 <a
                   href={`mailto:${t.contact.email}`}
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                  className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
                 >
                   {t.contact.email}
                 </a>
               </div>
             </div>
 
+            {t.contact.phone && (
+              <div className="flex gap-4 items-start">
+                <Phone className="text-neutral-700 dark:text-neutral-300 flex-shrink-0 mt-1" size={24} />
+                <div>
+                  <h3 className="font-bold text-neutral-900 dark:text-white mb-1">{t.contact.labels.phone}</h3>
+                  <p className="text-neutral-600 dark:text-neutral-400">{t.contact.phone}</p>
+                </div>
+              </div>
+            )}
+
             <div className="flex gap-4 items-start">
-              <Phone className="text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" size={24} />
+              <MapPin className="text-neutral-700 dark:text-neutral-300 flex-shrink-0 mt-1" size={24} />
               <div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Phone</h3>
-                <p className="text-gray-600 dark:text-gray-400">{t.contact.phone}</p>
+                <h3 className="font-bold text-neutral-900 dark:text-white mb-1">{t.contact.labels.address}</h3>
+                <p className="text-neutral-600 dark:text-neutral-400">{t.contact.address}</p>
               </div>
             </div>
 
             <div className="flex gap-4 items-start">
-              <MapPin className="text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" size={24} />
+              <Clock className="text-neutral-700 dark:text-neutral-300 flex-shrink-0 mt-1" size={24} />
               <div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Address</h3>
-                <p className="text-gray-600 dark:text-gray-400">{t.contact.address}</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 items-start">
-              <Clock className="text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" size={24} />
-              <div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Office Hours</h3>
-                <p className="text-gray-600 dark:text-gray-400">{t.contact.office}</p>
+                <h3 className="font-bold text-neutral-900 dark:text-white mb-1">{t.contact.labels.office}</h3>
+                <p className="text-neutral-600 dark:text-neutral-400">{t.contact.office}</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-neutral-950 p-8 rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-800">
             <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Name
+                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                  {t.contact.form.name}
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your name"
+                  className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white focus:ring-2 focus:ring-neutral-500 focus:border-transparent"
+                  placeholder={t.contact.form.namePlaceholder}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email
+                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                  {t.contact.form.email}
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="your@email.com"
+                  className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white focus:ring-2 focus:ring-neutral-500 focus:border-transparent"
+                  placeholder={t.contact.form.emailPlaceholder}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Message
+                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                  {t.contact.form.message}
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="Your message..."
+                  className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white focus:ring-2 focus:ring-neutral-500 focus:border-transparent resize-none"
+                  placeholder={t.contact.form.messagePlaceholder}
                 />
               </div>
 
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
-                Send Message
-              </Button>
+              <Button className="w-full">{t.contact.form.send}</Button>
             </form>
           </div>
         </div>

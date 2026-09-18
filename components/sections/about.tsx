@@ -8,13 +8,13 @@ export function About() {
   const { t } = useThemeLanguage();
 
   return (
-    <section id="about" className="py-20 px-4 bg-white dark:bg-slate-900">
+    <section id="about" className="py-20 px-4 bg-white dark:bg-neutral-950">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6">
             {t.about.title}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
             {t.about.content}
           </p>
         </div>

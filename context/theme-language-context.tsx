@@ -17,7 +17,7 @@ interface ThemeLanguageContextType {
 const ThemeLanguageContext = createContext<ThemeLanguageContextType | undefined>(undefined);
 
 export function ThemeLanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('vi');
   const [theme, setTheme] = useState<Theme>('light');
 
   const value: ThemeLanguageContextType = {

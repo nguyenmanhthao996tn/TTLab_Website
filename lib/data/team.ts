@@ -1,58 +1,72 @@
-export const teamMembers = [
+export type TeamMember = {
+  id: number;
+  nameVi: string;
+  nameEn: string;
+  titleEn?: string;
+  titleVi?: string;
+  roleEn?: string;
+  roleVi?: string;
+  affiliation: string;
+  hIndex?: number;
+  image: string;
+  scholarUrl?: string;
+};
+
+// Key members of TTLab (The Things Lab), Faculty of Computer Engineering,
+// University of Information Technology (UIT), VNU-HCM.
+// Source: TTLab group introduction slides (TTLAB_20260227.pptx).
+// Row 1 (3 members): Huy, Fabien, Thao. Row 2 (2 members): Tuan, Kiet.
+export const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Dr. Sarah Chen",
-    role: "Director & Principal Investigator",
-    bio: "PhD in Computer Science, 15+ years in AI research and technology transfer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    type: "long-term",
-    joinDate: "2010",
-  },
-  {
-    id: 2,
-    name: "Prof. James Mitchell",
-    role: "Co-Director, Biotechnology",
-    bio: "Leading researcher in biotech applications and medical innovation",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    type: "long-term",
-    joinDate: "2012",
-  },
-  {
-    id: 3,
-    name: "Dr. Maria Rodriguez",
-    role: "Research Scientist, Materials Science",
-    bio: "Expert in novel materials and sustainable composites",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    type: "long-term",
-    joinDate: "2014",
-  },
-  {
-    id: 4,
-    name: "Dr. Alex Park",
-    role: "Senior Engineer, Robotics",
-    bio: "Specializing in autonomous systems and AI integration",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    type: "long-term",
-    joinDate: "2015",
+    nameVi: "Trịnh Lê Huy",
+    nameEn: "Le-Huy Trinh",
+    titleEn: "Assoc. Prof.",
+    titleVi: "PGS. TS.",
+    affiliation: "FCE-UIT",
+    hIndex: 10,
+    image: "/team/le-huy-trinh.png",
+    scholarUrl: "https://scholar.google.com/citations?user=ddL6nWEAAAAJ&hl=vi&oi=ao",
   },
   {
     id: 5,
-    name: "Emily Watson",
-    role: "PhD Student, AI & Machine Learning",
-    bio: "Research focus on neural networks and deep learning applications",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    type: "student",
-    joinDate: "2023",
-    leaveDate: "2026",
+    nameVi: "Fabien Ferrero",
+    nameEn: "Fabien Ferrero",
+    titleEn: "Prof.",
+    titleVi: "GS.",
+    affiliation: "LEAT-UCA",
+    hIndex: 35,
+    image: "/team/fabien-ferrero.png",
+    scholarUrl: "https://scholar.google.com/citations?user=tKraducAAAAJ&hl=vi&oi=ao",
   },
   {
-    id: 6,
-    name: "Marcus Johnson",
-    role: "Master's Student, Robotics",
-    bio: "Developing autonomous navigation systems for UAVs",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    type: "student",
-    joinDate: "2024",
-    leaveDate: "2025",
+    id: 4,
+    nameVi: "Nguyễn Mạnh Thảo",
+    nameEn: "Manh-Thao Nguyen",
+    titleEn: "Dr.",
+    titleVi: "TS.",
+    affiliation: "FCE-UIT / LEAT-UCA",
+    hIndex: 5,
+    image: "/team/manh-thao-nguyen.png",
+    scholarUrl: "https://scholar.google.com/citations?user=NzdXEfAAAAAJ&hl=vi&oi=ao",
+  },
+  {
+    id: 3,
+    nameVi: "Phan Thanh Tuấn",
+    nameEn: "Thanh-Tuan Phan",
+    roleEn: "Eng.",
+    roleVi: "Kỹ sư",
+    affiliation: "FCE-UIT",
+    image: "/team/thanh-tuan-phan.jpg",
+    scholarUrl: "https://scholar.google.com/citations?user=Y-nsd00AAAAJ&hl=vi",
+  },
+  {
+    id: 2,
+    nameVi: "Nguyễn Tuấn Kiệt",
+    nameEn: "Tuan-Kiet Nguyen",
+    roleEn: "Eng.",
+    roleVi: "Kỹ sư",
+    affiliation: "RFThings CO., LTD",
+    image: "/team/tuan-kiet-nguyen.png",
   },
 ];

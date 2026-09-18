@@ -8,42 +8,40 @@ export function Footer() {
   const { t } = useThemeLanguage();
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white py-12 px-4">
+    <footer className="bg-neutral-950 text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <RainbowDivider />
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
           {/* Logo Section */}
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
-              TTLab
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Pioneering research in innovation and technology transfer.
+            <h3 className="text-2xl font-bold text-white mb-4">TTLab</h3>
+            <p className="text-neutral-400 text-sm">
+              The Things Lab — FCE, UIT, VNU-HCM.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-bold text-white mb-4">Navigation</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-neutral-400">
               <li>
-                <a href="#about" className="hover:text-blue-400 transition-colors">
+                <a href="#about" className="hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#research" className="hover:text-blue-400 transition-colors">
+                <a href="#research" className="hover:text-white transition-colors">
                   Research
                 </a>
               </li>
               <li>
-                <a href="#team" className="hover:text-blue-400 transition-colors">
+                <a href="#team" className="hover:text-white transition-colors">
                   Team
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-blue-400 transition-colors">
+                <a href="#projects" className="hover:text-white transition-colors">
                   Projects
                 </a>
               </li>
@@ -53,19 +51,19 @@ export function Footer() {
           {/* Resources */}
           <div>
             <h4 className="font-bold text-white mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-neutral-400">
               <li>
-                <a href="#publications" className="hover:text-blue-400 transition-colors">
+                <a href="#publications" className="hover:text-white transition-colors">
                   Publications
                 </a>
               </li>
               <li>
-                <a href="#news" className="hover:text-blue-400 transition-colors">
+                <a href="#news" className="hover:text-white transition-colors">
                   News
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-blue-400 transition-colors">
+                <a href="#contact" className="hover:text-white transition-colors">
                   Contact
                 </a>
               </li>
@@ -78,25 +76,25 @@ export function Footer() {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors"
               >
                 <Github size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors"
               >
                 <Twitter size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors"
               >
                 <Mail size={20} />
               </a>
@@ -104,12 +102,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="border-t border-neutral-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-400">
             <p>&copy; {t.footer.copyright}</p>
             <div className="flex gap-6">
               {t.footer.links.map((link, index) => (
-                <a key={index} href="#" className="hover:text-blue-400 transition-colors">
+                <a key={index} href="#" className="hover:text-white transition-colors">
                   {link}
                 </a>
               ))}

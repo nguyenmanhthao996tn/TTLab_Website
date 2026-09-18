@@ -1,5 +1,5 @@
 export function RainbowDivider() {
   return (
-    <div className="h-1 w-full bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 my-12" />
+    <div className="h-px w-full bg-gradient-to-r from-transparent via-neutral-400 dark:via-neutral-600 to-transparent my-12" />
   );
 }
