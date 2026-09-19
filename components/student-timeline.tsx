@@ -64,8 +64,8 @@ export function StudentTimeline({ students }: StudentTimelineProps) {
                     className="absolute flex flex-col items-center"
                     style={{ left: `${position}%` }}
                   >
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mb-2"></div>
-                    <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">
+                    <div className="w-2 h-2 bg-neutral-900 dark:bg-neutral-100 rounded-full mb-2"></div>
+                    <span className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
                       {year}
                     </span>
                   </div>
@@ -73,7 +73,7 @@ export function StudentTimeline({ students }: StudentTimelineProps) {
               })}
             </div>
             {/* Horizontal line */}
-            <div className="h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 rounded-full"></div>
+            <div className="h-1 bg-gradient-to-r from-neutral-300 via-neutral-500 to-neutral-700 dark:from-neutral-700 dark:via-neutral-500 dark:to-neutral-300 rounded-full"></div>
           </div>
 
           {/* Students on zigzag */}
@@ -92,23 +92,23 @@ export function StudentTimeline({ students }: StudentTimelineProps) {
                 >
                   <div className="flex items-start gap-4" style={{ marginLeft: `${position}%` }}>
                     {/* Connection line and indicator */}
-                    <div className="absolute -top-8 w-0.5 h-8 bg-gray-300 dark:bg-gray-600"></div>
-                    <div className="absolute -top-6 left-0 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-slate-900"></div>
+                    <div className="absolute -top-8 w-0.5 h-8 bg-neutral-300 dark:bg-neutral-600"></div>
+                    <div className="absolute -top-6 left-0 transform -translate-x-1/2 w-4 h-4 bg-neutral-900 dark:bg-neutral-100 rounded-full border-4 border-white dark:border-neutral-950"></div>
 
                     {/* Timeline bar showing duration */}
                     <div
-                      className="absolute -top-12 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
+                      className="absolute -top-12 h-1 bg-gradient-to-r from-neutral-400 to-neutral-700 dark:from-neutral-600 dark:to-neutral-300 rounded-full"
                       style={{ width: `${barWidth}%` }}
                     ></div>
 
                     {/* Student Card */}
                     <div
-                      className={`w-80 bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow p-4 ${
+                      className={`w-80 bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-sm hover:shadow-md transition-shadow p-4 ${
                         isLeft ? 'ml-0' : 'ml-auto'
                       }`}
                     >
                       <div className="flex gap-4">
-                        <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-br from-blue-400 to-purple-500 p-0.5">
+                        <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-br from-neutral-300 to-neutral-600 dark:from-neutral-600 dark:to-neutral-900 p-0.5">
                           <Image
                             src={student.image}
                             alt={student.name}
@@ -118,13 +118,13 @@ export function StudentTimeline({ students }: StudentTimelineProps) {
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h4 className="text-sm font-bold text-gray-900 dark:text-white truncate">
+                          <h4 className="text-sm font-bold text-neutral-900 dark:text-white truncate">
                             {student.name}
                           </h4>
-                          <p className="text-xs text-blue-600 dark:text-blue-400 font-semibold mb-1 line-clamp-2">
+                          <p className="text-xs text-neutral-600 dark:text-neutral-400 font-semibold mb-1 line-clamp-2">
                             {student.role}
                           </p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">
+                          <p className="text-xs text-neutral-500 dark:text-neutral-400">
                             <span className="font-semibold">{student.joinDate}</span>
                             {student.leaveDate ? ` - ${student.leaveDate}` : ' - Present'}
                           </p>

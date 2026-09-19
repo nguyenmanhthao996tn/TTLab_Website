@@ -8,24 +8,11 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'TTLab - Technology and Transfer Laboratory',
-  description: 'Pioneering research in innovation, technology transfer, and collaborative excellence',
-  generator: 'v0.app',
+  title: 'TTLab - The Things Lab | FCE, UIT, VNU-HCM',
+  description:
+    'TTLab (The Things Lab) - nhóm nghiên cứu thuộc Khoa Kỹ thuật Máy tính, Trường Đại học Công nghệ Thông tin (UIT), ĐHQG-HCM. Nghiên cứu hệ thống nhúng, RF/anten, IoT, LPWAN và robotics.',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/icon-32x32.png',
     apple: '/apple-icon.png',
   },
 }
@@ -36,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="vi">
       <body className="font-sans antialiased">
         <ThemeLanguageProvider>
           {children}
