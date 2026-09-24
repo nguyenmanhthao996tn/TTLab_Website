@@ -17,9 +17,9 @@ export function Navbar() {
     { label: t.nav.about, href: '#about' },
     { label: t.nav.research, href: '#research' },
     { label: t.nav.team, href: '#team' },
-    { label: t.nav.projects, href: '#projects' },
+    // { label: t.nav.projects, href: '#projects' }, // tạm ẩn
     { label: t.nav.publications, href: '#publications' },
-    { label: t.nav.facilities, href: '#facilities' },
+    // { label: t.nav.facilities, href: '#facilities' }, // tạm ẩn
     { label: t.nav.news, href: '#news' },
     { label: t.nav.contact, href: '#contact' },
   ];

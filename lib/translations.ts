@@ -65,6 +65,9 @@ export const translations = {
     news: {
       title: "Latest News",
       description: "Updates from TTLab and the research community",
+      viewAll: "View all news",
+      empty: "No news yet.",
+      noImage: "No image",
     },
     contact: {
       title: "Get In Touch",
@@ -161,6 +164,9 @@ export const translations = {
     news: {
       title: "Tin Tức Mới Nhất",
       description: "Cập nhật từ TTLab và cộng đồng nghiên cứu",
+      viewAll: "Xem tất cả tin tức",
+      empty: "Chưa có bài viết nào.",
+      noImage: "Không có ảnh",
     },
     contact: {
       title: "Liên Lạc Với Chúng Tôi",

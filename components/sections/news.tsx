@@ -1,11 +1,12 @@
 'use client';
 
+import Link from 'next/link';
 import { useThemeLanguage } from '@/context/theme-language-context';
 import { NewsCard } from '@/components/news-card';
-import { news } from '@/lib/data/news';
 import { RainbowDivider } from '@/components/rainbow-divider';
+import type { NewsItem } from '@/lib/news';
 
-export function News() {
+export function News({ items }: { items: NewsItem[] }) {
   const { t } = useThemeLanguage();
 
   return (
@@ -20,18 +21,25 @@ export function News() {
 
         <RainbowDivider />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {news.map((item) => (
-            <NewsCard
-              key={item.id}
-              title={item.title}
-              excerpt={item.excerpt}
-              date={item.date}
-              category={item.category}
-              image={item.image}
-            />
-          ))}
-        </div>
+        {items.length === 0 ? (
+          <p className="text-center text-gray-500 dark:text-gray-400 mt-12">{t.news.empty}</p>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {items.map((item) => (
+                <NewsCard key={item.id} item={item} noImageLabel={t.news.noImage} />
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Link
+                href="/news"
+                className="inline-block rounded-md border border-neutral-300 dark:border-neutral-700 px-5 py-2.5 text-sm font-medium text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              >
+                {t.news.viewAll} →
+              </Link>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

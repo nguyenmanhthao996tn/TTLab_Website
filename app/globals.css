@@ -123,3 +123,47 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Toàn văn bài viết News (HTML đã sanitize từ uit.edu.vn) */
+@layer components {
+  .news-content {
+    @apply text-base leading-relaxed text-neutral-700 dark:text-neutral-300;
+  }
+  .news-content > * + * {
+    @apply mt-4;
+  }
+  .news-content h2,
+  .news-content h3,
+  .news-content h4 {
+    @apply mt-8 font-bold text-neutral-900 dark:text-white;
+  }
+  .news-content h2 { @apply text-2xl; }
+  .news-content h3 { @apply text-xl; }
+  .news-content a {
+    @apply underline underline-offset-2 text-neutral-900 dark:text-white hover:no-underline break-words;
+  }
+  .news-content strong,
+  .news-content b {
+    @apply font-semibold text-neutral-900 dark:text-white;
+  }
+  .news-content ul { @apply list-disc pl-6 space-y-1; }
+  .news-content ol { @apply list-decimal pl-6 space-y-1; }
+  .news-content blockquote {
+    @apply border-l-4 border-neutral-300 dark:border-neutral-700 pl-4 italic;
+  }
+  .news-content img {
+    @apply mx-auto h-auto max-w-full rounded-md;
+  }
+  .news-content figcaption,
+  .news-content caption {
+    @apply mt-2 text-center text-sm text-neutral-500 dark:text-neutral-400;
+  }
+  /* UIT hay dùng table chỉ để bố cục ảnh + chú thích */
+  .news-content table {
+    @apply block w-full overflow-x-auto;
+  }
+  .news-content td,
+  .news-content th {
+    @apply p-1 align-top;
+  }
+}

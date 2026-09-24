@@ -6,4 +6,9 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+    # ADMIN_PASSWORD, SESSION_SECRET
+    env_file:
+      - .env.local
+    volumes:
+      - ./data:/app/data
     restart: unless-stopped

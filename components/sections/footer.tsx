@@ -40,11 +40,13 @@ export function Footer() {
                   Team
                 </a>
               </li>
+              {/* tạm ẩn cùng section Projects
               <li>
                 <a href="#projects" className="hover:text-white transition-colors">
                   Projects
                 </a>
               </li>
+              */}
             </ul>
           </div>
 
