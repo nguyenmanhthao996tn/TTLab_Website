@@ -1,9 +1,11 @@
 services:
   ttlab-website:
-    build: .
+    build:
+      context: .
+      network: host
     container_name: ttlab-website
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000" # chỉ Nginx trên host truy cập được
     environment:
       - NODE_ENV=production
     # ADMIN_PASSWORD, SESSION_SECRET
